@@ -32,3 +32,31 @@ var getTime = ()=> {
 
 }
 
+var onStart = ()=> {
+    getTime();
+
+    //adds click listener function to saveBtn 
+    $(".saveBtn").on("click", function(){
+        var text = $(this).siblings(".event").val();
+        var time = $(this).parent().attr("id");
+        // console.log(text, time);
+
+        localStorage.setItem(time, text); 
+           
+    })
+
+    //returns value of the localStorage item
+    $("#hour-9 .event").val(localStorage.getItem("hour-9"));
+    $("#hour-10 .event").val(localStorage.getItem("hour-10"));
+    $("#hour-11 .event").val(localStorage.getItem("hour-11"));
+    $("#hour-12 .event").val(localStorage.getItem("hour-12"));
+    $("#hour-13 .event").val(localStorage.getItem("hour-13"));
+    $("#hour-14 .event").val(localStorage.getItem("hour-14"));
+    $("#hour-15 .event").val(localStorage.getItem("hour-15"));
+    $("#hour-16 .event").val(localStorage.getItem("hour-16"));
+    $("#hour-17 .event").val(localStorage.getItem("hour-17"));
+
+}
+
+onStart()
+
