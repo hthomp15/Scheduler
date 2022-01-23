@@ -20,8 +20,11 @@ textarea{
   border-radius: 0;
   border-bottom: 10px solid black;
 }
+.container {
+  margin-bottom: 20px;
+}
 
-.description{
+.event{
   white-space: pre-wrap;
 }
 
@@ -36,8 +39,8 @@ textarea{
   border-top: 1px solid white;;
 }
 
-.hour {
-  background-color: #ffffff;
+.time {
+  
   color: #000000;
   border-top: 1px dashed #000000;
 }
